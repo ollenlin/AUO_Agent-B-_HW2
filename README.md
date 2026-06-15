@@ -91,11 +91,11 @@ export const convertUnitTool = {
 
 ### 結果一
 
-![Capture1](./capture1.png)
+![單位換算結果一](capture1.png)
 
 ---
 
 ### 結果二
 
-![Capture2](./capture2.png)
+![單位換算結果二](capture2.png)
 
