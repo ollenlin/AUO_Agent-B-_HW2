@@ -1,5 +1,6 @@
 import { client, DEFAULT_MODEL } from "./lib/openai.js";
 import { getWeatherTool, getWeather } from "./tools/weather.js";
+import { convertUnitTool, convertUnit } from "./tools/convert_unit.js";
 import {
   getNearbyYoubikeTool,
   getNearbyYoubike,
@@ -9,15 +10,15 @@ import { spinner } from "./utils/spinner.js";
 const AVAILABLE_TOOLS = {
   get_weather: getWeather,
   get_nearby_youbike: getNearbyYoubike,
+  convert_unit: convertUnit,
 };
 
-const tools = [getWeatherTool, getNearbyYoubikeTool];
+const tools = [getWeatherTool, getNearbyYoubikeTool, convertUnitTool];
 
 const messages = [
   {
     role: "user",
-    content:
-      "我在台北車站附近，請問現在天氣如何？順便告訴我附近還有沒有 YouBike 可以租？",
+    content: "25 度 C 是華氏幾度？",
   },
 ];
 
